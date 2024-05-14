@@ -19,7 +19,7 @@ func main() {
 	}
 
 	log.Print("Serving on http://localhost:3080")
-	err := http.ListenAndServe(":3080", h)
+	err := http.ListenAndServe("127.0.0.1:3080", h)
 	if err != http.ErrServerClosed {
 		log.Fatal(err)
 	}
