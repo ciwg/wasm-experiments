@@ -39,7 +39,7 @@ canvas: clean
 	GOOS=js GOARCH=wasm go build -o ./html/test.wasm ./canvas/main.go
 	cp ./canvas/index.html ./html/index.html
 	cp ./canvas/main.go ./html/main.go
-	cp $$(go env GOROOT)/misc/wasm/wasm_exec.js ./html/wasm_exec.js
+	cp "$$(go env GOROOT)/misc/wasm/wasm_exec.js" ./html/wasm_exec.js
 
 tinygo-canvas: clean
 	docker run --rm -v $$(pwd):/go/src/github.com/johanbrandhorst/wasm-experiments tinygo/tinygo:latest /bin/bash -c "\
