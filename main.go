@@ -18,8 +18,8 @@ func main() {
 		h = gziphandler.GzipHandler(h)
 	}
 
-	log.Print("Serving on http://localhost:8080")
-	err := http.ListenAndServe(":8080", h)
+	log.Print("Serving on http://localhost:3080")
+	err := http.ListenAndServe(":3080", h)
 	if err != http.ErrServerClosed {
 		log.Fatal(err)
 	}
